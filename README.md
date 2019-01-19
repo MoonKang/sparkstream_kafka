@@ -34,6 +34,16 @@ Changes have reduced data latency from 24 hours to < 1hr.
 2. Comparing performances of Microbatching and Streaming
 ![alt text](/images/spark_stream_microbatch.png)
 
+Prior to May 2018, SparkStreaming had more of concept of micro batching. As you create you had to set batching time with desired intervals.
+
+'''
+val ssc = new StreamingContext("local[*]", "PrintTweets", Seconds(1))
+'''
+
+But with Spark 2.3, Spark offers realtime streaming. For details, it can be found https://databricks.com/blog/2018/03/20/low-latency-continuous-processing-mode-in-structured-streaming-in-apache-spark-2-3-0.html
+
+
+
 
 3. Connect spark with Cassandra
 ![alt text](/images/cassandra.png)
