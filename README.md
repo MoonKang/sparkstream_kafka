@@ -19,10 +19,11 @@ to
 
 ![alt text](/images/uber_present.png)
 
+Changes have reduced data latency from 24 hours to < 1hr. 
 
 
 
-### Steps
+### Steps for this repo
 
 1. Kafka -> SparkStreaming (ETL) -> Parquet
 
