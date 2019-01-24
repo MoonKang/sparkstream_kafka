@@ -1,0 +1,33 @@
+
+
+## Starting setups
+zookeeper-server-start config/zookeeper.properties
+kafka-server-start config/server.properties
+
+## Create kafka topic - required: topic name, partitions, replication
+kafka-topics --zookeeper 127.0.0.1:2181 --create --topic first_topic --partitions 3 --replication-factor 1
+
+## List kafka topics
+kafka-topics --zookeeper 127.0.0.1:2181 --list
+kafka-topics --zookeeper 127.0.0.1:2181 --topic first_topic --describe
+
+## delete topic
+kafka-topics --zookeeper 127.0.0.1:2181 --topic first_topic --delete
+
+## open a producer
+kafka-console-producer --broker-list 127.0.01:9092 --topic first_topic
+
+## open consumer
+kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic --from-beginning
+
+
+## list consumer groups
+kafka-consumer-groups --boostrap-server 127.0.0.1:9092 --list
+
+## reset consumer group offsets
+kafka-consumer-groups --boostrap-server 127.0.0.1:9092 --group first_group --reset-offsets --to-earliest --execute --all-topics
+
+
+
+
+
