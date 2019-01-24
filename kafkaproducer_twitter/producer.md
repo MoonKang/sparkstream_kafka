@@ -21,5 +21,6 @@ kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic twitter_tweets
 Found that IDs from kafka producer are matched with console-consumer!
 
 
+
 References:
     https://github.com/twitter/hbc
